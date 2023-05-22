@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="dist/output.css" rel="stylesheet">
+
+  <title>Frontend Mentor | News homepage</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body class="bg-off-white">
+  <div class="px-6 lg:px-36 lg:pt-12">
+    <header class="flex justify-between items-center my-9">
+      <img src="assets/images/logo.svg" alt="logo">
+      <div class="hidden gap-9 md:flex">
+        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="#">New</a>
+        <a class="nav-link" href="#">Popular</a>
+        <a class="nav-link" href="#">Trending</a>
+        <a class="nav-link" href="#">Categories</a>
+      </div>
+      <div class="inline-block md:hidden">
+        <a href="javascript:void(0)" id="nav-opener"><img src="assets/images/icon-menu.svg" alt=""></a>
+        <div id="nav-modal-back" class="fixed left-full top-0 h-full w-full bg-black opacity-50"></div>
+        <nav id="nav-modal" class="flex flex-col fixed top-0 -right-full mt-auto bg-white h-full w-3/4">
+          <div class="h-32">
+            <button id="nav-closer" class="absolute top-7 right-5">
+              <img src="assets/images/icon-menu-close.svg" alt="close icon">
+            </button>
+          </div>
+          <a class="ml-6 mt-5 text-2xl" href="#">Home</a>
+          <a class="ml-6 mt-5 text-2xl" href="#">New</a>
+          <a class="ml-6 mt-5 text-2xl" href="#">Popular</a>
+          <a class="ml-6 mt-5 text-2xl" href="#">Trending</a>
+          <a class="ml-6 mt-5 text-2xl" href="#">Categories</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="grid grid-cols-1 gap-6 lg:grid-cols-3 lg:gap-12">
+      <div class="lg:col-span-2">
+        <img class="w-full lg:hidden" src="assets/images/image-web-3-mobile.jpg" alt="web 3">
+        <img class="w-full hidden lg:block" src="assets/images/image-web-3-desktop.jpg" alt="web 3">
+      </div>
+
+      <div>
+        <h1 class="font-extrabold text-5xl text-very-dark-blue">The Bright Future of Web 3.0?</h1>
+      </div>
+
+      <div>
+        <p>
+          We dive into the next evolution of the web that claims to put the power of the platforms back into the hands
+          of the
+          people.
+          But is it really fulfilling its promise?
+        </p>
+        <a class="inline-block uppercase tracking-widest text-off-white py-2 px-6 mt-8 bg-soft-red font-bold transition-colors hover:bg-very-dark-blue"
+          href="#">Read more</a>
+      </div>
+
+      <div
+        class="min-h-[400px] my-8 bg-very-dark-blue text-off-white p-5 lg:row-span-2 lg:row-start-1 lg:col-end-4 lg:my-0 lg:pt-10">
+        <h2 class="text-3xl text-soft-orange font-bold">New</h2>
+        <div class="flex flex-col justify-around h-full pb-10">
+          <article class="">
+            <h3 class="font-black pb-2"><a class="text-off-white text-lg transition-colors hover:text-soft-orange" href="#">Hydrogen VS Electric Cars</a></h3>
+            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+          </article>
+          <div class="w-full h-[1px] rounded-full bg-dark-grayish-blue"></div>
+          <article class="">
+            <h3 class="font-black pb-2"><a class="text-off-white text-lg transition-colors hover:text-soft-orange" href="#">The Downsides of AI Artistry</a></h3>
+            <p>What are the possible adverse effects of on-demand AI image generation?</p>
+          </article>
+          <div class="w-full h-[1px] rounded-full bg-dark-grayish-blue"></div>
+          <article class="">
+            <h3 class="font-black pb-2"><a class="text-off-white text-lg transition-colors hover:text-soft-orange" href="#"> Is VC Funding Drying Up?</a></h3>
+            <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="agroup">
+        <img class="agroup__img" src="assets/images/image-retro-pcs.jpg" alt="retro pc 3d">
+        <div class="agroup-desc">
+          <div class="agroup-desc__number">01</div>
+          <h3 class="agroup-desc__title"><a href="#">Reviving Retro PCs</a></h3>
+          <p>What happens when old PCs are given modern upgrades?</p>
+        </div>
+      </div>
+      <div class="agroup">
+        <img class="agroup__img" src="assets/images/image-top-laptops.jpg" alt="retro pc 3d">
+        <div class="agroup-desc">
+          <div class="agroup-desc__number">02</div>
+          <h3 class="agroup-desc__title"><a href="#">Top 10 Laptops of 2022</a></h3>
+          <p>Our best picks for various needs and budgets.</p>
+        </div>
+      </div>
+      <div class="agroup">
+        <img class="agroup__img" src="assets/images/image-gaming-growth.jpg" alt="retro pc 3d">
+        <div class="agroup-desc">
+          <div class="agroup-desc__number">03</div>
+          <h3 class="agroup-desc__title"><a href="#">The Grow of Gaming</a></h3>
+          <p>How the pandemic has sparked fresh opportunities.</p>
+        </div>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://twitter.com/patzidev">Patrick ZOCLI</a>.
+    </div>
+  </div>
+  <script src="nav-toggling.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: "Inter";
+        src: url("../assets/fonts/static/Inter-Regular.ttf");
+        font-weight: 400;
+    }
+
+    @font-face {
+        font-family: "Inter";
+        src: url("../assets/fonts/static/Inter-Bold.ttf");
+        font-weight: 700;
+    }
+
+    @font-face {
+        font-family: "Inter";
+        src: url("../assets/fonts/static/Inter-ExtraBold.ttf");
+        font-weight: 800;
+    }
+
+    html {
+      font-family: "Inter";
+      font-weight: 400;
+    }
+
+    a, p {
+        font-size: 15px;
+        @apply text-dark-grayish-blue;
+    }
+}
+
+.nav-link {
+    @apply transition-colors hover:text-soft-red;
+}
+
+.agroup {
+    @apply grid grid-cols-3 mb-4 lg:my-8 lg:mb-16 lg:gap-6;
+}
+
+.agroup:last-of-type {
+    @apply mb-16;
+}
+
+.agroup__img {
+    @apply col-end-2;
+    max-height: 120px;
+}
+
+.agroup-desc {
+    @apply col-span-2 flex flex-col justify-between;
+}
+
+.agroup-desc__number {
+    @apply col-start-2 col-end-4 font-bold text-gray-400 text-3xl;
+}
+
+.agroup-desc__title {
+    @apply font-bold;
+}
+
+.agroup-desc__title a {
+    @apply text-very-dark-blue text-lg transition-colors hover:text-soft-red;
+}
